@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:wght@500;600;700&display=swap');
 
 :root {
-    	/* Button and hover */
+    /* Button and hover */
     --primary: #e66f51;
     --primary-dark: #66706a;
     /* Text of 3 types */
-    --text: #EFF3FF;
-    --dark-text: #1d242113;
+    --text: #66706a;
     --light-text: #AFB7D1;
+    --dark-text: #000000;
     /* Main Background */
 	--background: #f4efe7;
     /* Card, Form, and Border */
@@ -46,17 +46,13 @@ body {
 }
 /*looks good*/
 ::selection {
-	color: var(--paper-light);
-	background: var(--coral);
+	color: var(--white);
+	background: var(--primary);
 }
 
 a {
     color: inherit;
     text-decoration: none;
-}
-
-a:hover {
-	color: var(--primary);
 }
 
 ul {
@@ -84,8 +80,7 @@ header {
 }
 
 .navbar {
-    max-width: 1100px;
-    margin: auto;
+    background: var(--background);
     padding: 20px 60px;
     display: flex;
     justify-content: space-between;
@@ -111,24 +106,25 @@ header {
 }
 
 .nav-links a:hover {
-    color: var(--light-text);
+    color: var(--dark-text);
 }
 
 
 /* ==================== SLIDER ==================== */
 
+/* The switch - the box around the slider */
 .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
 }
 
 /* Hide default HTML checkbox */
 .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 /* The slider */
@@ -139,50 +135,45 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--primary-dark);
-    border: 1px solid var(--light-text);
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    -webkit-transition: .4s;
     transition: .4s;
 }
 
 .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    top: 50%;
-    background-color: var(--light-text);
-    transition: .4s;
-    transform: translateY(-50%);
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--white);
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
 input:checked + .slider {
-  background-color: var(--white);
+  background-color: var(--primary-dark);
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 5px var(--light-text);
+  box-shadow: 0 0 3px var(--primary-dark);
 }
 
 input:checked + .slider:before {
-    transform: translate(26px, -50%);
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
 }
 
 /* Rounded sliders */
 .slider.round {
-    border-radius: 34px;
+  border-radius: 34px;
 }
 
 .slider.round:before {
-    border-radius: 50%;
-}
-
-
-/* ==================== Container ==================== */
-.container{
-    background-color: var(--primary-dark);
-    width: calc(100% - 80px);
-    margin: 0 auto;
+  border-radius: 50%;
 }
 
 /* ==================== HERO ==================== */
@@ -204,7 +195,7 @@ input:checked + .slider:before {
 }
 
 .intro {
-    color: var(--light-text);
+    color: var(--dark--line-text);
     font-size: 18px;
     font-weight: bold;
 }
@@ -217,7 +208,7 @@ input:checked + .slider:before {
 }
 
 .hero h2 {
-    color: var(--light-text);
+    color: var(--dark--line-text);
     font-size: 30px;
     margin-bottom: 20px;
 }
@@ -271,7 +262,7 @@ input:checked + .slider:before {
 
 .btn:hover {
     color: var(--primary);
-    background-color: var(--primary-dark);
+    background-color: var(--background);
     transform: translateY(-2px);
 }
 
@@ -460,7 +451,7 @@ footer {
 }
 
 .social-links a:hover {
-    color: var(--light-text);
+    color: var(--dark--line-text);
 }
 
 
