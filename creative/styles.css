@@ -1,22 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:wght@500;600;700&display=swap');
+/* ==================== CSS VARIABLES ==================== */
 
 :root {
     /* Button and hover */
-    --primary: #e66f51;
+    --primary: #e2be30;
     --primary-dark: #66706a;
     /* Text of 3 types */
-    --text: #66706a;
+    --text: #ffffff;
     --light-text: #AFB7D1;
     --dark-text: #000000;
     /* Main Background */
-	--background: #f4efe7;
+	--background: #2a2928;
     /* Card, Form, and Border */
     --white: #fbf8f2;
-    --border: #a8b9a4;
+    --border: #e2be30;
 
-    --footer: #000000;
-    
-	--line: rgba(29, 36, 33, 0.18);
+    --footer: #000000;    
 }
 
 
@@ -39,15 +37,8 @@ body {
     font-family: 'JetBrains Mono', monospace;
     font-size: 16px;
     line-height: 1.6;
-	background:
-		linear-gradient(var(--line) 1px, transparent 1px),
-		var(--background);
-	background-size: 100% 8px;
-}
-/*looks good*/
-::selection {
-	color: var(--white);
-	background: var(--primary);
+    color: var(--text);
+	background-color: var(--background);
 }
 
 a {
@@ -73,14 +64,10 @@ header {
     left: 0;
     right: 0;
     z-index: 1000;
-    background:
-		linear-gradient(to right, var(--dark-text) 1px, transparent 1px),
-		var(--background);
     border-bottom: 1px solid var(--border);
 }
 
 .navbar {
-    background: var(--background);
     padding: 20px 60px;
     display: flex;
     justify-content: space-between;
@@ -114,17 +101,17 @@ header {
 
 /* The switch - the box around the slider */
 .switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
 }
 
 /* Hide default HTML checkbox */
 .switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
 /* The slider */
@@ -137,43 +124,40 @@ header {
     bottom: 0;
     background-color: var(--background);
     border: 1px solid var(--border);
-    -webkit-transition: .4s;
-    transition: .4s;
+    transition: 1s;
 }
 
 .slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: var(--white);
-  -webkit-transition: .4s;
-  transition: .4s;
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    top: 50%;
+    background-color: var(--white);
+    transition: .4s;
+    transform: translateY(-50%);
 }
 
 input:checked + .slider {
-  background-color: var(--primary-dark);
+    background-color: var(--primary-dark);
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 3px var(--primary-dark);
+    box-shadow: 0 0 3px var(--primary-dark);
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+    transform: translate(26px, -50%);
 }
 
 /* Rounded sliders */
 .slider.round {
-  border-radius: 34px;
+    border-radius: 34px;
 }
 
 .slider.round:before {
-  border-radius: 50%;
+    border-radius: 50%;
 }
 
 /* ==================== HERO ==================== */
@@ -192,35 +176,24 @@ input:checked + .slider:before {
 .hero-content {
     padding: 30px;
     flex: 1;
+    color: var(--text);
 }
 
 .intro {
-    color: var(--dark--line-text);
     font-size: 18px;
     font-weight: bold;
 }
 
 .hero h1 {
-    color: var(--text);
     font-size: 76px;
     line-height: 1.1;
     margin: 10px 0;
 }
 
 .hero h2 {
-    color: var(--dark--line-text);
-    font-size: 30px;
+    color: var(--text);
+    font-size: 40px;
     margin-bottom: 20px;
-}
-
-.hero h2::after {
-    content: "";
-    display: block;
-    width: calc(100% - 70px);
-    height: 4px;
-    margin-top: 8px;
-    background-color: var(--primary);
-    border-radius: 5px;
 }
 
 .hero-description {
@@ -238,7 +211,7 @@ input:checked + .slider:before {
     height: 300px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid var(--white);
+    border: 1px solid var(--border);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -252,6 +225,7 @@ input:checked + .slider:before {
     background-color: var(--primary);
     border: 2px solid var(--primary);
     border-radius: 8px;
+    font-family: inherit;
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
@@ -401,6 +375,7 @@ input:checked + .slider:before {
     border: 1px solid var(--border);
     border-radius: 8px;
     background-color: var(--white);
+    font-family: inherit;
     font-size: 18px;
     outline: none;
     transition: border-color 0.2s ease;
@@ -451,7 +426,7 @@ footer {
 }
 
 .social-links a:hover {
-    color: var(--dark--line-text);
+    color: var(--dark-text);
 }
 
 

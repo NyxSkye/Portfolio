@@ -124,7 +124,7 @@ header {
     bottom: 0;
     background-color: var(--primary-dark);
     border: 1px solid var(--light-text);
-    transition: .4s;
+    transition: 1s;
 }
 
 .slider:before {
@@ -205,16 +205,6 @@ input:checked + .slider:before {
     margin-bottom: 20px;
 }
 
-.hero h2::after {
-    content: "";
-    display: block;
-    width: calc(100% - 70px);
-    height: 4px;
-    margin-top: 8px;
-    background-color: var(--primary);
-    border-radius: 5px;
-}
-
 .hero-description {
     max-width: 550px;
     color: var(--text);
@@ -230,7 +220,7 @@ input:checked + .slider:before {
     height: 300px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid var(--white);
+    border: 5px solid var(--background);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 

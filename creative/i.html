@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Aditi Tewari(Nyx Aurion Skye) designer portfolio showcasing skills and projects.">
+
+        <title>NyxSkye | Developer Portfolio</title>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="s.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="mySidenav" class="sidenav round">
+            <div class="logo" href="#">
+                <span class="logo-short"><strong>NAS</strong></span>
+                <span class="logo-text">Nyx Aurion Skye</span>
+            </div>
+            <hr class="nav-divider">
+            <ul class="nav-links">
+                <!-- CHANGE: Swapped switch order and wrapped with toggle text; hidden until hover -->
+                <li class="theme-toggle-item">
+                    <i class="fa-solid fa-moon nav-icon"></i>
+                    <div class="switch-wrapper">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <a href="/developer/index.html" class="slider round"></a>
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <a href="#about">
+                        <i class="fa-solid fa-user nav-icon"></i>
+                        <span class="nav-text">About</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#services">
+                        <i class="fa-solid fa-briefcase nav-icon"></i>
+                        <span class="nav-text">Services</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#work">
+                        <i class="fa-solid fa-laptop-code nav-icon"></i>
+                        <span class="nav-text">Work</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact">
+                        <i class="fa-solid fa-envelope nav-icon"></i>
+                        <span class="nav-text">Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Use any element to open the sidenav -->
+        <span onclick="openNav()" style="cursor: pointer; font-size: 24px;"></span>
+        <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+        <div id="main">
+        </div>
+    </body>
+</html>
