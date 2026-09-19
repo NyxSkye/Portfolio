@@ -77,6 +77,7 @@ img {
     align-items: center; /* Center the icons */
     white-space: nowrap;
     transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 34px;
 }
 
 .sidenav:hover {
@@ -89,15 +90,6 @@ img {
     padding-top: 20px;
     font-size: 12px;
     display: block;
-}
-
-/* Rounded sliders */
-.sidenav.round {
-    border-radius: 34px;
-}
-
-.sidenav.round:before {
-    border-radius: 50%;
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
